@@ -1,0 +1,20 @@
+
+<mat-card>
+  <mat-card-title>New Post</mat-card-title>
+
+  <img src="/assets/img/avatar.png" alt="avatar" width="160px" height="150px">
+<br>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Post Title</mat-label>
+    <input matInput placeholder="Post Title" value="" #postTitle>
+  </mat-form-field>
+  <br>
+  <mat-form-field class="example-full-width" appearance="fill">
+    <mat-label>Post Description</mat-label>
+    <textarea matInput placeholder="Post Description" value="" rows="6" #postdescription></textarea>
+  </mat-form-field>
+<br>
+  <button mat-raised-button color="primary" (click)="addPost(postTitle)">Add Post</button>
+
+</mat-card>
+

@@ -1,0 +1,23 @@
+<li [ngClass]="{'list-group-item': true,
+                'list-group-item-success': post.loveIT > 0,
+                'list-group-item-danger': post.loveIT < 0}"
+>
+
+  <h4>{{ post.title }}</h4>
+  <p>{{ post.datePost | date: "short" }}</p>
+  <p>{{ post.description }}</p>
+  <button class="btn btn-success" (click)="likeIt()">
+    Like it <span class="badge bg-primary"> {{ post.loveIT }} </span>
+  </button>
+  &nbsp;
+  <!-- <button class="btn btn-danger"
+    [disabled]="enableDontLike"
+    (click)="dontLikeIt()"
+  > -->
+  <button mat-raised-button color="primary"
+    [disabled]="enableDontLike"
+    (click)="dontLikeIt()"
+  >
+    Don't like
+  </button>
+</li>
