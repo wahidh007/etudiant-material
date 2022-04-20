@@ -7,6 +7,11 @@
         </mat-panel-title>
       </mat-expansion-panel-header>
       <p>This is the primary content of the panel.</p>
+      <mat-card-actions align="end">
+        <button mat-raised-button color="primary">EDIT</button>
+        <button mat-raised-button color="warn">DELETE</button>
+        <button mat-raised-button color="accent" [routerLink]="['/etudiantDetail', e.prenom]">DETAILS</button>
+      </mat-card-actions>
     </mat-expansion-panel>
   </mat-accordion>
 </mat-card>

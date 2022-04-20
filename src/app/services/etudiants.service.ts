@@ -16,6 +16,10 @@ export class EtudiantsService {
 
   constructor() { }
 
+  addEtudiant(e: Etudiant) {
+    this.etudiants.push(e);
+  }
+
   // etudiants : Etudiant[] = [];
 
   // etudiantsUpdated = new Subject<Etudiant[]>();

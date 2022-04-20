@@ -32,6 +32,7 @@ import { EtudiantAddComponent } from './etudiants/etudiant-add/etudiant-add.comp
 import { AproposComponent } from './etudiants/apropos/apropos.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { EtudiantDetailComponent } from './etudiants/etudiant-detail/etudiant-detail.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { HttpClientModule } from '@angular/common/http';
     Header2Component,
     EtudiantsListComponent,
     EtudiantAddComponent,
-    AproposComponent
+    AproposComponent,
+    EtudiantDetailComponent
   ],
   imports: [
     BrowserModule,

@@ -43,7 +43,8 @@ export class EtudiantAddComponent implements OnInit {
   //   form.resetForm();
   // }
 
-  addEtudiant(etudiantName: HTMLInputElement) {
-    alert('Bonjour ' + etudiantName.value);
+  addEtudiant(etdForm: NgForm) {
+    alert('Bonjour ' + etdForm.value.nomEtudiant);
+    this.etudiantsService.addEtudiant(new Etudiant(etdForm.value.nomEtudiant));
   }
 }

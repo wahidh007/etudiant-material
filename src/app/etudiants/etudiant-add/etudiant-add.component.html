@@ -44,13 +44,15 @@
 <mat-card style="width: 50%; margin-top: 1rem; margin-left: 2rem;">
   <mat-card-title>Ajout Etudiant</mat-card-title>
 
-  <mat-form-field appearance="fill" style="width: 100%;">
-    <mat-label>Etudiant Name</mat-label>
-    <input matInput #nomEtudiant>
-  </mat-form-field>
+  <form (ngSubmit)="addEtudiant(formEtd)" #formEtd="ngForm">
+    <mat-form-field appearance="fill" style="width: 100%;">
+      <mat-label>Etudiant Name</mat-label>
+      <input matInput name="nomEtudiant" id="nomEtudiant" #nomEtudiant ngModel>
+    </mat-form-field>
+    <button mat-raised-button color="primary" type="submit">Add</button>
+  </form>
   <br>
 
-  <button mat-raised-button color="primary"
-          (click)="addEtudiant(nomEtudiant)">Add</button>
+
 
 </mat-card>
